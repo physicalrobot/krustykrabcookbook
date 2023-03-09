@@ -85,7 +85,7 @@ app.post('/recipes', async (req, res, next) => {
     });
     res.json(recipe);
   } else {
-    res.status(401).send('You must be logged in to create a cupcake');
+    res.status(401).send('You must be logged in to create a recipe');
   }
 });
 
