@@ -117,8 +117,8 @@ app.put("/recipes/:id", async (req, res, next) => {
       return;
     }
     const userId = req.user.id;
-    const { name, flavor, ingredients, cost } = req.body;
-    await updateRecipe.update({ name: name, flavor: flavor,ingredients:ingredients,cost:cost});
+    const { title, flavor, ingredients, cost } = req.body;
+    await updateRecipe.update({ title: title, flavor: flavor, ingredients: ingredients, cost: cost});
     res.send(updateRecipe);
   } catch (error) {
     console.error(error);
